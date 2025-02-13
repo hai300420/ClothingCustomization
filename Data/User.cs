@@ -7,25 +7,25 @@ public partial class User
 {
     public int UserId { get; set; }
 
-    public string TaiKhoan { get; set; } = null!;
+    public string Username { get; set; } = null!;
 
-    public string MatKhau { get; set; } = null!;
+    public string Password { get; set; } = null!;
 
-    public string HoTen { get; set; } = null!;
+    public string FullName { get; set; } = null!;
 
-    public bool GioiTinh { get; set; }
+    public bool Gender { get; set; }
 
-    public DateTime NgaySinh { get; set; }
+    public DateTime DateOfBirth { get; set; }
 
-    public string? DiaChi { get; set; }
+    public string? Address { get; set; }
 
-    public string? DienThoai { get; set; }
+    public string? Phone { get; set; }
 
     public string Email { get; set; } = null!;
 
-    public string? Hinh { get; set; }
+    public string? Avatar { get; set; }
 
-    public bool HieuLuc { get; set; }
+    public bool IsDeleted { get; set; }
 
     public int RoleId { get; set; }
 

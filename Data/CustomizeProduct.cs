@@ -11,13 +11,13 @@ public partial class CustomizeProduct
 
     public int UserId { get; set; }
 
-    public string? MauAo { get; set; }
+    public string? ShirtColor { get; set; }
 
-    public string? HinhToanDien { get; set; }
+    public string? FullImage { get; set; }
 
-    public string? MoTa { get; set; }
+    public string? Description { get; set; }
 
-    public decimal DonGia { get; set; }
+    public decimal Price { get; set; }
 
     public virtual ICollection<DesignElement> DesignElements { get; set; } = new List<DesignElement>();
 

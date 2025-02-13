@@ -9,9 +9,11 @@ public partial class OrderStage
 
     public int OrderId { get; set; }
 
-    public string TenTrangThai { get; set; } = null!;
+    public int OrderStageNameId { get; set; }
 
-    public DateTime? NgayCapNhat { get; set; }
+    public DateTime? UpdatedDate { get; set; }
 
     public virtual Order Order { get; set; } = null!;
+
+    public virtual OrderStageName OrderStageName { get; set; } = null!;
 }

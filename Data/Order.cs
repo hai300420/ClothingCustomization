@@ -9,29 +9,27 @@ public partial class Order
 
     public int CustomizeProductId { get; set; }
 
-    public DateTime? NgayDat { get; set; }
+    public DateTime? OrderDate { get; set; }
 
-    public DateTime? NgayGiao { get; set; }
+    public DateTime? DeliveryDate { get; set; }
 
-    public string? HoTenNguoiNhan { get; set; }
+    public string? RecipientName { get; set; }
 
-    public string? DiaChiGiaoHang { get; set; }
+    public string? DeliveryAddress { get; set; }
 
-    public string? CachVanChuyen { get; set; }
+    public string? ShippingMethod { get; set; }
 
-    public double? PhiVanChuyen { get; set; }
+    public double? ShippingFee { get; set; }
 
-    public string? GhiChu { get; set; }
+    public string? Notes { get; set; }
 
-    public decimal? DonGia { get; set; }
+    public decimal? Price { get; set; }
 
-    public int? SoLuong { get; set; }
+    public int? Quantity { get; set; }
 
-    public decimal? TongTien { get; set; }
+    public decimal? TotalPrice { get; set; }
 
     public virtual CustomizeProduct CustomizeProduct { get; set; } = null!;
-
-    public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 
     public virtual ICollection<OrderStage> OrderStages { get; set; } = new List<OrderStage>();
 

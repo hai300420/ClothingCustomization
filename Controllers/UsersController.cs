@@ -28,7 +28,7 @@ namespace ClothingCustomization.Controllers
             }
 
             // Check if the user already exists
-            var existingUser = (await _userRepo.GetUsers()).FirstOrDefault(x => x.TaiKhoan == userDto.TaiKhoan);
+            var existingUser = (await _userRepo.GetUsers()).FirstOrDefault(x => x.Username == userDto.Username);
             if (existingUser != null)
             {
                 return BadRequest("Tai khoan nay da su dung");
@@ -38,21 +38,21 @@ namespace ClothingCustomization.Controllers
             // Map DTO to Entity
             var newUser = new User
             {
-                TaiKhoan = userDto.TaiKhoan,
-                MatKhau = userDto.MatKhau,
-                HoTen = userDto.HoTen,
-                GioiTinh = userDto.GioiTinh,
-                NgaySinh = userDto.NgaySinh,
-                DiaChi = userDto.DiaChi,
-                DienThoai = userDto.DienThoai,
+                Username = userDto.Username,
+                Password = userDto.Password,
+                FullName = userDto.FullName,
+                Gender = userDto.Gender,
+                DateOfBirth = userDto.DateOfBirth,
+                Address = userDto.Address,
+                Phone = userDto.Phone,
                 Email = userDto.Email,
                 RoleId = 3,
-                HieuLuc = true,
+                IsDeleted = false,
             };
 
             await _userRepo.Register(newUser);
 
-            return Ok(new { Message = "Tai khoan dang ki thanh cong", UserId = newUser.UserId });
+            return Ok(new { Message = "Account register successfully", UserId = newUser.UserId });
         }
 
         [HttpPost]
@@ -77,11 +77,11 @@ namespace ClothingCustomization.Controllers
 
             if (userId == null)
             {
-                return BadRequest(new { Message = "Ban chua dang nhap" });
+                return BadRequest(new { Message = "You are not login" });
             }
 
             _httpContextAccessor.HttpContext.Session.Clear();
-            return Ok(new { Message = "Da dang xuat thanh cong" });
+            return Ok(new { Message = "Logout successfully" });
         }
 
         [HttpGet]

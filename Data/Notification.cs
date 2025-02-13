@@ -9,13 +9,13 @@ public partial class Notification
 
     public int UserId { get; set; }
 
-    public string? ChuDe { get; set; }
+    public string? Subject { get; set; }
 
-    public string? TinNhan { get; set; }
+    public string? Message { get; set; }
 
-    public DateTime NgayTao { get; set; }
+    public DateTime CreatedDate { get; set; }
 
-    public bool DaXem { get; set; }
+    public bool IsRead { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

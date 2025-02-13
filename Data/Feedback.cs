@@ -11,13 +11,11 @@ public partial class Feedback
 
     public int UserId { get; set; }
 
-    public int SoSao { get; set; }
+    public int Rating { get; set; }
 
-    public string DanhGia { get; set; } = null!;
+    public string Review { get; set; } = null!;
 
-    public DateTime? NgayTao { get; set; }
-
-    public virtual Order Order { get; set; } = null!;
+    public DateTime? CreatedDate { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

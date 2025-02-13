@@ -14,7 +14,7 @@ namespace ClothingCustomization.Repository
 
         public async Task<User> Login(string taikhoan, string matkhau)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.TaiKhoan == taikhoan && u.MatKhau == matkhau);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Username == taikhoan && u.Password == matkhau);
         }
 
         public async Task<User> Register(User user)

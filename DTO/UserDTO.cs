@@ -5,23 +5,24 @@ namespace ClothingCustomization.DTO
     public class UserDTO
     {
         [Required]
-        public string TaiKhoan { get; set; }
+        public string Username { get; set; }
         [Required]
-        public string MatKhau { get; set; }
+        public string Password { get; set; }
         [Required]
-        public string HoTen { get; set; }
+        public string FullName { get; set; }
         [Required]
-        public bool GioiTinh { get; set; }
+        public bool Gender { get; set; }
         [Required]
-        public DateTime NgaySinh { get; set; }
+        [DataType("Datetime")]
+        public DateTime DateOfBirth { get; set; }
         
-        public string? DiaChi { get; set; }
+        public string? Address { get; set; }
 
-        public string? DienThoai { get; set; }
+        public string? Phone { get; set; }
         [Required]
         public string Email { get; set; }
   
-        public string? Hinh { get; set; }
+        public string? Avatar { get; set; }
 
     }
 }

@@ -9,11 +9,11 @@ public partial class DesignArea
 
     public int ProductId { get; set; }
 
-    public string? TenNoiThietKe { get; set; }
+    public string? AreaName { get; set; }
 
-    public string? ToaDoX { get; set; }
+    public string? CoordinateX { get; set; }
 
-    public string? ToaDoY { get; set; }
+    public string? CoordinateY { get; set; }
 
     public virtual ICollection<DesignElement> DesignElements { get; set; } = new List<DesignElement>();
 
